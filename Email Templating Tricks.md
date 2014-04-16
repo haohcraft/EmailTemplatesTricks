@@ -5,6 +5,7 @@ Email Templating Tricks
 	.add this to text/css to avoid the mysterious spacing
 		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; } 
 	.<!-- horizontal spacing -->
+	```
 		<table width="10" align="left" cellpadding="0" cellspacing="0" style="width=10px;">
 			<tbody>
 				<tr>
@@ -12,13 +13,17 @@ Email Templating Tricks
 				</tr>
 			</tbody>
 		</table>
+	```
 
 	.<!-- vertical spacing -->
+	```
 		<tr>
 			<td width="100%" height="10" style="font-size: 1px; line-height: 10px;"></td>
 		</tr>
+	```
 2. Make columns
 	- sample codes:
+	```
 	tr
 		table class="theTotalWidth(15+300+15)" cellpadding="0" cellspacing="0" border="0"
 			tbody 
@@ -27,15 +32,16 @@ Email Templating Tricks
 					<td class="w300" width="300" valign="top"></td>
 					<td class="w15" width="15" valign="top"></td>
 
-
+	```
 3. Set widths in each cell rather than on the table
-
+```
 <table cellspacing="0" cellpadding="0" border="0">
   <tr>
     <td width="150"></td>
     <td width="350"></td>
   </tr>
 </table>
+```
 
 4. Set a Background Color on a Container Table
 
@@ -67,6 +73,7 @@ Images are well support as long as they are put into the template with <img> tag
 	https://www.campaignmonitor.com/blog/post/3948/hiding-content-in-both-desktop-and-web-email-clients
 
 	In summary:
+	```
 		@media only screen and (max-device-width: 480px) {
 
 				*[class=mobileHide] { 
@@ -94,34 +101,40 @@ Images are well support as long as they are put into the template with <img> tag
 
 				}
 			}
+	```
 		AND for mobileHide, just put regular inline styles
 		But for mobileShow-*, should put inline styles:  
 
 			display:none;font-size: 0; max-height: 0; line-height: 0;
 
 		Should not only hide <tr> but <td> as well:
-
-			.<!-- vertical spacing -->
+		```
+			<!-- vertical spacing -->
 				<tr class="mobileShow-h5-topborder" style="display:none; font-size: 0px; max-height: 0; line-height: 0; mso-hide: all;">
 					<td class="mobileShow-h5-topborder" style="display:none; font-size: 0px; max-height: 0; line-height: 0; mso-hide: all;"></td>
 				</tr>
+		```
 
 10. show/hide images
+	```html
 		<div class="mobileHide">
 			<img class="mobileHide" src=$image_basic_url/DesktopA_SearchWidget.png  alt="" class="" width="700" height="90" border="0" style="display:block; width:700px; height: 90px;">
 		</div>
 		<div class="mobileShow-image-w480" style="display:none; height: 90px; max-height: 0; width:0px; mso-hide: all;"> 
 			<img class="mobileShow-image-w480" src=$image_basic_url/MobileA_SearchWidget.png  alt="" class="" width="0" border="0" style="display:block; width:0; height: 90px; mso-hide: all;">
 		</div>
+	```
 
 11. To hide the content in the Outlook Web App
-	// Add "font: 0;" in the <tr>
-	// NOTE: there is no "font-size: 0px" in <tr> but only in <td>
-	<tr class="mobileShow-f13" style="display:none; font:0; height:0px; max-height: 0; line-height: 0; mso-hide: all;">
-		<td class="mobileShow-f13-left" align="left" style="font-family: $font-family; color: $font-color-black; display:none; font-size: 0px;height:0px; max-height: 0; line-height: 0; mso-hide: all;">
-			Round trip
-		</td>
-	</tr>
+	Add "font: 0;" in the <tr>
+	NOTE: there is no "font-size: 0px" in <tr> but only in <td>
+	```
+		<tr class="mobileShow-f13" style="display:none; font:0; height:0px; max-height: 0; line-height: 0; mso-hide: all;">
+			<td class="mobileShow-f13-left" align="left" style="font-family: $font-family; color: $font-color-black; display:none; font-size: 0px;height:0px; max-height: 0; line-height: 0; mso-hide: all;">
+				Round trip
+			</td>
+		</tr>
+	```
 
 
 		
