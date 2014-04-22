@@ -107,7 +107,7 @@ Images are well support as long as they are put into the template with <img> tag
 
 			display:none;font-size: 0; max-height: 0; line-height: 0;
 
-		Should not only hide <tr> but <td> as well:
+		Should not only hide <tr> but also <td> as well:
 		```
 			<!-- vertical spacing -->
 				<tr class="mobileShow-h5-topborder" style="display:none; font-size: 0px; max-height: 0; line-height: 0; mso-hide: all;">
@@ -126,6 +126,7 @@ Images are well support as long as they are put into the template with <img> tag
 	```
 
 11. To hide the content in the Outlook Web App
+
 	Add "font: 0;" in the <tr>
 	NOTE: there is no "font-size: 0px" in <tr> but only in <td>
 	```
@@ -135,6 +136,6 @@ Images are well support as long as they are put into the template with <img> tag
 			</td>
 		</tr>
 	```
-
+12. When there are two tables under the td, we SHOULD set a LARGE enough "height" value to that <td> 
 
 		
