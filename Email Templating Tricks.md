@@ -6,7 +6,7 @@ Email Templating Tricks
 		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; } 
 	.<!-- horizontal spacing -->
 	```
-		<table width="10" align="left" cellpadding="0" cellspacing="0" style="width=10px;">
+		<table width="10" align="left" cellpadding="0" cellspacing="0"  border="0" style="width=10px;">
 			<tbody>
 				<tr>
 					<td width="10" height="10"  style="width:10px;height:10px;">&nbsp;</td>
@@ -137,5 +137,21 @@ Images are well support as long as they are put into the template with <img> tag
 		</tr>
 	```
 12. When there are two tables under the td, we SHOULD set a LARGE enough "height" value to that <td> 
+
+13 When try to lay two tables next to each other horizontall, SHOULD specify the width of them
+
+14 For Gmail APP on Android, we need to add a dummy padding at the end of the table to stretch the view to show correctly
+	```
+					<tr>
+					<td class="mobilehide">
+						<table class="mobilehide" cellspacing="0" cellpadding="0" border="0" align="center" width="700">
+							<tr>
+								 <td class="mobilehide nopadding" style="padding:0 350px">&nbsp;</td>>
+							</tr>
+						</table>
+					</td>
+				</tr>
+	```
+15 To show the black right arrow emoji, we should choose `&#9656;` instead of `&#9654;` or `&#9658;` in order to avoid Apple Emoji
 
 		
