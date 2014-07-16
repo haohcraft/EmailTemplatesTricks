@@ -58,9 +58,10 @@ Email Templating Tricks
 8. image 
 
 	Images are well support as long as they are put into the template with <img> tags.
-		- Always add style="display:block" to images. Without this rule gmail will add phantom space below the image in the online reader
-		- Always add border="0" to <img> tags otherwise there will be a border around your images
-		- Background images via the style attribute are not widely supported and should not be used
+
+	- Always add `style="display:block"` to images. Without this rule gmail will add phantom space below the image in the online reader
+	- Always add `border="0"` to `<img>` tags otherwise there will be a border around your images
+	- Background images via the style attribute are not widely supported and should not be used
 
 9. Hide the mobile content on destop
 	- Reference 1:  [How to hide mobile content in destop](https://www.campaignmonitor.com/forums/topic/7405/how-to-hide-mobile-content-in-desktop-clients/)
@@ -95,8 +96,8 @@ Email Templating Tricks
 
 				}
 			}
-	AND for mobileHide, just put regular inline styles
-	But for mobileShow-*, should put inline styles:  
+	AND for `mobileHide`, just put regular inline styles
+	But for `mobileShow-*`, should put inline styles:  
 
 			display:none;font-size: 0; max-height: 0; line-height: 0;
 
@@ -107,7 +108,7 @@ Email Templating Tricks
 					<td class="mobileShow-h5-topborder" style="display:none; font-size: 0px; max-height: 0; line-height: 0; mso-hide: all;"></td>
 				</tr>
 
-10. show/hide images
+10. Show/hide images
 	
 		<div class="mobileHide">
 			<img class="mobileHide" src=$image_basic_url/DesktopA_SearchWidget.png  alt="" class="" width="700" height="90" border="0" style="display:block; width:700px; height: 90px;">
@@ -127,9 +128,9 @@ Email Templating Tricks
 			</td>
 		</tr>
 
-12. When there are two tables under the td, we SHOULD set a LARGE enough "height" value to that <td> 
+12. When there are two tables under the td, we *SHOULD* set a *LARGE* enough "height" value to that <td> 
 
-13. When try to lay two tables next to each other horizontall, SHOULD specify the width of them
+13. When try to lay two tables next to each other horizontall, *SHOULD* specify the width of them
 
 14. For Gmail APP on Android, we need to add a dummy padding at the end of the table to stretch the view to show correctly
 
@@ -143,6 +144,6 @@ Email Templating Tricks
 		</td>
 		</tr>
 
-15. To show the black right arrow emoji, we should choose `&#9656;` instead of `&#9654;` or `&#9658;` in order to avoid Apple Emoji
+15. To show the black right arrow emoji, we *should* choose `&#9656;` instead of `&#9654;` or `&#9658;` in order to avoid Apple Emoji
 
 		
