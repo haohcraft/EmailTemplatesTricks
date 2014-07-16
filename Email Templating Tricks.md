@@ -120,7 +120,7 @@ Email Templating Tricks
 11. To hide the content in the Outlook Web App
 
 	Add `font: 0;` in the `<tr>`
-	NOTE: there is no "font-size: 0px" in <tr> but only in <td>
+	NOTE: there is no "font-size: 0px" in `<tr>` but only in `<td>`
 
 		<tr class="mobileShow-f13" style="display:none; font:0; height:0px; max-height: 0; line-height: 0; mso-hide: all;">
 			<td class="mobileShow-f13-left" align="left" style="font-family: $font-family; color: $font-color-black; display:none; font-size: 0px;height:0px; max-height: 0; line-height: 0; mso-hide: all;">
