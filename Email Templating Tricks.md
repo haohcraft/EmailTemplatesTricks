@@ -146,4 +146,6 @@ Email Templating Tricks
 
 15. To show the black right arrow emoji, we *should* choose `&#9656;` instead of `&#9654;` or `&#9658;` in order to avoid Apple Emoji
 
+16. In order to make the outlook conditional comment work correctly, use `<!--[if !mso]><!-- -->` instead of `<!--[if !mso]><!-->` Check out this[reference](https://www.campaignmonitor.com/forums/topic/7544/outlookcom-problems-with-conditional-comments-in-the-body/)
+
 		
